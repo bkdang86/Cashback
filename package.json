@@ -1,0 +1,13 @@
+{
+  "name": "card-cashback-v55-production",
+  "private": true,
+  "version": "5.5.0",
+  "scripts": {
+    "check": "node --check app.js && node --check functions/api/merchant-resolve.js && node --check functions/api/card-policy-resolve.js",
+    "dev": "npx wrangler pages dev .",
+    "deploy": "npx wrangler pages deploy . --project-name card-cashback-v55"
+  },
+  "devDependencies": {
+    "wrangler": "latest"
+  }
+}
