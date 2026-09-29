@@ -1,1 +1,1 @@
-{"name":"Card Cashback","short_name":"Cashback","description":"Choose the credit card with the highest net cashback benefit.","start_url":"./","scope":"./","display":"standalone","background_color":"#fffafa","theme_color":"#dc2626","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
+{"name":"Card Cashback","short_name":"Cashback","start_url":"./","scope":"./","display":"standalone","background_color":"#fffafa","theme_color":"#dc2626","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}

@@ -1,25 +1,14 @@
-# Card Cashback mobile release
+# Card Cashback Mobile v4
 
-## Run locally
-Serve this folder over HTTP. Example:
+Implemented:
+- No default cards.
+- Initial policy retrieval in Add Card from issuer-profile data.
+- No scheduled, monthly, or background policy update.
+- Existing cards can be edited manually: statement day, reset day, foreign fee, category, MCC, cashback rate, monthly cap.
+- Rules can be added or deleted.
+- Home keeps cashback caps hidden while using them in calculations.
+- Foreign transactions rank by net benefit after foreign fee.
+- Merchant name is entered manually; no merchant suggestion or renaming.
+- Transactions can be recorded and deleted, restoring cashback usage.
 
-```bash
-python3 -m http.server 8080
-```
-
-Open http://localhost:8080.
-
-## Publish
-Upload all files to any HTTPS static host. On iPhone, open the published address in Safari, select Share, then Add to Home Screen.
-
-## Included fixes
-- Stable mobile layout for iPhone 17 Pro safe areas.
-- Merchant abbreviation and Vietnamese-name suggestions.
-- Top-three recommendations with cashback-cap calculation hidden from Home.
-- Foreign transactions ranked by net benefit: eligible cashback minus foreign transaction fee.
-- Transaction record/delete correctly adjusts remaining cashback.
-- Local persistence and offline service worker.
-- Cards page includes policy synchronization status.
-
-## Backend requirement
-The monthly refresh shown in the UI is a release-ready interface stub. Live bank-site crawling must run on a secure backend scheduler on the final day of each month, validate HTML/PDF changes, version policies, and publish approved data through an API. Do not place crawler credentials or issuer integration secrets in this PWA.
+Production note: this PWA includes issuer-profile fixtures to demonstrate the one-time retrieval flow. Direct retrieval from arbitrary issuer websites requires a deployed backend endpoint. The mobile app intentionally contains no periodic scheduler.
